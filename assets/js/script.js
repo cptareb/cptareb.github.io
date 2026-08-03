@@ -33,6 +33,38 @@ function randomLightShade() {
 
 }
 
+function randomDarkShade() {
+
+    const shades = [
+        "#111111",
+        "#151515",
+        "#1a1a1a",
+        "#202020",
+        "#262626"
+    ];
+
+    return shades[
+        Math.floor(Math.random() * shades.length)
+    ];
+
+}
+
+function randomOrangeShade() {
+
+    const shades = [
+        "#ff6a00",
+        "#f56600",
+        "#ff7a00",
+        "#e85d00",
+        "#ff8500"
+    ];
+
+    return shades[
+        Math.floor(Math.random() * shades.length)
+    ];
+
+}
+
 
 function randomTile(row, col) {
 
@@ -52,7 +84,7 @@ function randomTile(row, col) {
 
 
     // Mostly light
-    if (roll < 0.80) {
+    if (roll < 0.60) {
 
         return {
             type: "light",
@@ -63,11 +95,11 @@ function randomTile(row, col) {
 
 
     // Some dark industrial blocks
-    if (roll < 0.95) {
+    if (roll < 0.80) {
 
         return {
             type: "dark",
-            color: "#111111"
+            color: randomDarkShade()
         };
 
     }
@@ -76,7 +108,7 @@ function randomTile(row, col) {
     // Rare orange accent
     return {
         type: "accent",
-        color: "#ff6a00"
+        color: randomOrangeShade()
     };
 
 }
