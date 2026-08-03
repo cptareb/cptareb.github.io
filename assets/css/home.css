@@ -1,15 +1,146 @@
 /* home.css */
 
-body {
+
+.home {
+
+    position: relative;
+
+    height: 100vh;
+
+    width: 100vw;
+
+    overflow: hidden;
+
+}
+
+
+/* ------------------
+   TILE GRID
+------------------- */
+
+
+.tile-grid {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: grid;
+
+    grid-template-columns: repeat(10, 1fr);
+
+    grid-template-rows: repeat(7, 1fr);
+
+    gap: 6px;
+
+    padding: 6px;
+
+    z-index: 1;
+
+}
+
+.tile.light {
+    background: #f2f2f2;
+}
+
+.tile.dark {
+    background: #111;
+}
+
+.tile.accent {
+    background: #ff6a00;
+}
+
+
+/* future image tiles */
+
+.tile img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+
+/* ------------------
+   HERO
+------------------- */
+
+
+.hero {
+
+    position: absolute;
+
+    z-index: 10;
+
+
+    right: 8vw;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+
+    text-align: right;
+
+
     font-family: "Roboto Condensed", sans-serif;
+
+    background: rgba(255,255,255,0.92);
+
+    backdrop-filter: blur(4px);
+
+    padding: 3rem 4rem;
+
+    max-width: 450px;
+
 }
 
-#hero h1 {
-    font-size: 4rem;
+
+.hero h1 {
+
+
+    margin: 0;
+
+
+    font-size: clamp(4rem, 9vw, 8rem);
+
+
     font-weight: 700;
+
+
+    line-height: .85;
+
+
+    letter-spacing: .08em;
+
+
+    text-transform: uppercase;
+
+
+    color: black;
+
 }
 
-#hero p {
+
+
+.hero p {
+
+
+    margin-top: 25px;
+
+
     font-size: 1.2rem;
-    font-weight: 400;
+
+
+    letter-spacing: .15em;
+
+
+    text-transform: uppercase;
+
+
 }
