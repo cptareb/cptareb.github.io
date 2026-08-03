@@ -4,17 +4,17 @@ const rows = 7;
 const cols = 10;
 
 
-// Area behind your name
-function isHeroZone(row, col) {
 
-    return (
-        col >= 6 &&
-        row >= 2 &&
+function isProtectedZone(row, col) {
+
+    return(
+        col >= 5 &&
+        row >= 1 &&
         row <= 4
     );
 
-}
 
+}
 
 // Slight variations of the Asiimov white
 function randomLightShade() {
@@ -70,7 +70,7 @@ function randomTile(row, col) {
 
 
     // Keep hero area clean
-    if (isHeroZone(row, col)) {
+    if (isProtectedZone(row, col)) {
 
         return {
             type: "light",
@@ -140,23 +140,5 @@ for (let row = 0; row < rows; row++) {
     }
 
     
-
-}
-
-function isHeroZone(row, col) {
-
-    const heroStartRow = 2;
-    const heroEndRow = 4;
-
-    const heroStartCol = 6;
-    const heroEndCol = 9;
-
-
-    return (
-        row >= heroStartRow - 1 &&
-        row <= heroEndRow + 1 &&
-        col >= heroStartCol - 1 &&
-        col <= heroEndCol
-    );
 
 }
