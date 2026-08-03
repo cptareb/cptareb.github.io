@@ -1,0 +1,15 @@
+/* home.css */
+
+body {
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+#hero h1 {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
