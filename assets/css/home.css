@@ -1,6 +1,7 @@
 /* home.css */
 
 :root {
+
     --grid-cols: 10;
     --grid-rows: 7;
     --grid-gap: 3px;
@@ -71,7 +72,13 @@
 
 }
 
+/* ------------------
+   HOMEPAGE
+------------------- */
 
+.home-container {
+    height: 100vh;
+}
 
 /* ------------------
    HERO

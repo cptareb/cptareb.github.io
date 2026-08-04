@@ -1,5 +1,9 @@
 /* global.css */
 
+:root {
+    --page-padding: clamp(1.5rem, 5vw, 5rem);
+    --content-width: 1200px;
+}
 
 * {
     box-sizing: border-box;
