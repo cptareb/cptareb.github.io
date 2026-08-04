@@ -1,0 +1,506 @@
+.about-page {
+
+    padding-top: 10rem;
+
+    padding-bottom: 8rem;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+.about-page-body {
+    background-color: var(--asiimov-white);
+    color: var(--asiimov-black);
+}
+
+.site-header {
+
+    z-index: 10;
+
+}
+
+
+/* Hero */
+
+.about-hero {
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr;
+
+    align-items: center;
+
+    gap: 4rem;
+
+}
+
+
+
+.about-title h1 {
+
+    font-size: clamp(5rem, 12vw, 10rem);
+
+    line-height: .85;
+
+    margin: 0;
+
+}
+
+
+
+.about-image img {
+
+    width: min(100%, 300px);
+
+    aspect-ratio: 1;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+}
+
+
+
+
+/* Sections */
+
+.content-section {
+
+    margin-top: clamp(5rem, 10vw, 10rem);
+
+}
+
+
+
+.content-section h2 {
+
+    font-size: clamp(2rem, 5vw, 4rem);
+
+}
+
+
+
+/* Cards */
+
+.interest-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 2rem;
+
+}
+
+.interest-card {
+
+    position: relative;
+
+    min-height: 300px;
+
+    border: 2px solid var(--asiimov-black);
+
+    padding: 2rem;
+
+
+}
+
+.interest-card h3 {
+
+    margin: 0;
+
+    font-size: clamp(2rem, 3vw, 3rem);
+
+    font-weight: 700;
+
+
+}
+
+.interest-card h3::before {
+
+    content: "";
+
+    display: inline-block;
+
+    width: 18px;
+
+    height: 18px;
+
+    background: var(--asiimov-orange);
+
+    margin-right: .75rem;
+
+}
+
+.interest-card ul {
+
+    list-style: none;
+
+    margin-top: 2rem;
+
+    padding-left: 1.5rem;
+
+    border-left: 3px solid var(--asiimov-orange);
+
+}
+
+.interest-card li {
+
+    position: relative;
+
+    margin: 1rem 0;
+
+    font-weight: 700;
+
+}
+
+.interest-card li::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: -1.5rem;
+
+    top: 50%;
+
+    width: 1rem;
+
+    height: 3px;
+
+    background: var(--asiimov-orange);
+
+}
+
+
+/* Timeline */
+
+.timeline {
+
+    border-left: 3px solid var(--asiimov-black);
+
+    padding-left: 2rem;
+
+}
+
+
+
+.timeline-item {
+
+    margin-bottom: 3rem;
+
+}
+
+
+
+
+/* Skills */
+
+.skills {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 1rem;
+
+}
+
+
+
+.skills span {
+
+    border: 2px solid var(--asiimov-black);
+
+    padding: .5rem 1rem;
+
+}
+
+
+
+
+/* Decorative blocks */
+
+
+.page-decoration {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: -1;
+
+}
+
+
+
+.accent-box {
+
+    position: absolute;
+
+}
+
+
+
+.orange {
+
+    background: var(--asiimov-orange);
+
+}
+
+
+
+.black {
+
+    background: var(--asiimov-black);
+
+}
+
+
+
+.box-one {
+
+    width: 120px;
+
+    height: 120px;
+
+    top: 10rem;
+
+    left: 0;
+
+}
+
+
+
+.box-two {
+
+    width: 80px;
+
+    height: 250px;
+
+    right: 0;
+
+    top: 40%;
+
+}
+
+
+
+.box-three {
+
+    width: 200px;
+
+    height: 50px;
+
+    bottom: 5rem;
+
+    left: 10%;
+
+}
+
+
+
+
+
+@media(max-width:700px) {
+
+
+    .about-hero {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .about-image {
+
+        order: -1;
+
+    }
+
+
+    .interest-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .nav {
+
+        gap: .5rem;
+
+    }
+
+
+}
+
+/* SQUARES */
+
+/* =========================
+   Perimeter Geometry
+========================= */
+
+
+.perimeter-grid {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: 0;
+
+}
+
+
+
+.geo-square {
+
+    position: absolute;
+
+}
+
+
+
+/* Orange */
+
+.geo-square.orange {
+
+    background: var(--asiimov-orange);
+    opacity: .25;
+}
+
+
+
+/* Black */
+
+.geo-square.black {
+
+    background: var(--asiimov-black);
+    opacity: .12;
+
+}
+
+
+
+/* Individual placements */
+
+
+
+.square-one {
+
+    width: clamp(50px, 7vw, 120px);
+
+    aspect-ratio: 1;
+
+    top: 15%;
+
+    left: -20px;
+
+}
+
+
+.square-five {
+
+    width: clamp(30px, 5vw, 90px);
+
+    aspect-ratio: 1;
+
+    top: 65%;
+
+    left: 8%;
+
+}
+
+
+
+/* right side */
+
+.square-two {
+
+    width: clamp(80px, 10vw, 180px);
+
+    aspect-ratio: 1;
+
+    top: 25%;
+
+    right: -40px;
+
+}
+
+
+.square-six {
+
+    width: clamp(40px, 6vw, 100px);
+
+    aspect-ratio: 1;
+
+    bottom: 20%;
+
+    right: 5%;
+
+}
+
+
+
+/* lower accents */
+
+.square-three {
+
+    width: clamp(25px, 4vw, 70px);
+
+    aspect-ratio: 1;
+
+    bottom: 10%;
+
+    left: 25%;
+
+}
+
+
+.square-four {
+
+    width: clamp(60px, 8vw, 130px);
+
+    aspect-ratio: 1;
+
+    top: 8%;
+
+    right: 20%;
+
+}
+
+
+
+.square-seven {
+
+    width: clamp(35px, 5vw, 80px);
+
+    aspect-ratio: 1;
+
+    bottom: 5%;
+
+    left: 50%;
+
+}
+
+
+
+.square-eight {
+
+    width: clamp(25px, 4vw, 60px);
+
+    aspect-ratio: 1;
+
+    top: 50%;
+
+    left: 45%;
+
+}
