@@ -82,18 +82,17 @@
 
     z-index: 10;
 
-    left: calc(5 * (100% / 10) + 6px * 6);
+    left: calc(5 * (100% / 10) + var(--grid-gap) * 5);
 
-    top: calc(1 * (100% / 7) + 6px);
+    top: calc(1 * (100% / 7));
 
     width: calc(5 * (100% / 10) - 6px);
 
-    height: calc(3 * (100% / 7) - 6px);
+    height: calc(4 * (100% / 7) - 9px);
 
 }
 
 .hero {
-
     /* grid scaling */
     
     width: 100%;
@@ -115,12 +114,13 @@
 
     flex-direction: column;
 
+    align-items: flex-start;
+
 }
 
 
 .hero h1 {
-
-
+    transform: translateX(-0.04em);
     margin: 0;
 
 
@@ -148,7 +148,7 @@
 .hero p {
 
 
-    margin-top: 25px;
+    margin-top: 0px;
 
 
     font-size: clamp(.8rem, 1.2vw, 1.2rem);
@@ -161,12 +161,14 @@
 
     color: black;
 }
+
+
 /* ------------------
    SOCIAL LINKS
 ------------------- */
 .social-links {
 
-    margin-top: 1.5rem;
+    margin-top: auto;
 
     width:90%;
 
@@ -238,6 +240,8 @@
 
 .homelinks a {
 
+    transform: translateY(-6px);
+
     color: #111;
 
     font-family: "Roboto Condensed", sans-serif;
@@ -272,37 +276,65 @@
     content: "]";
     color: #ff6a00;
 }
+
+
 /* ------------------
-   PORTRAIT
+   RESIZE HANDLING
 ------------------- */
 
-.portrait {
+@media (max-width: 1200px) {
 
-    position: absolute;
+    .hero h1 {
+        font-size: clamp(3rem, 7vw, 6rem);
+    }
 
-    right: clamp(5rem, 13vw, 230px);
 
-    bottom: clamp(1.5rem, 8vw, 100px);
+    .hero {
+        padding: 2rem;
+    }
 
-    width: clamp(80px, 8vw, 120px);
-
-    height: clamp(80px, 8vw, 120px);
-
-    border-radius: 25%;
-
-    overflow: hidden;
-
-    border: 6px solid #ff6a00;
+    .social-links {
+        gap: 1rem;
+    }
 
 }
 
+@media (max-width: 900px) {
 
-.portrait img {
+    .hero-container {
 
-    width: 100%;
+        left: 10%;
 
-    height: 100%;
+        top: 15%;
 
-    object-fit: cover;
+        width: 80%;
+
+        height: 70%;
+
+    }
+
+    .homelinks {
+
+        flex-direction: column;
+
+        gap: .75rem;
+
+    }
+
+    .hero h1 {
+
+        font-size: clamp(3rem, 12vw, 6rem);
+
+    }
+
+    .social-links {
+
+        margin-top:auto;
+
+        width:100%;
+
+    }
+
+
 
 }

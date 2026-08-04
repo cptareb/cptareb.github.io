@@ -3,16 +3,47 @@ const grid = document.querySelector(".tile-grid");
 const rows = 7;
 const cols = 10;
 
+// for resizing safe zone alongside grid
+const layout = {
 
+    desktop: {
+        hero: {
+            colStart: 5,
+            colEnd: 9,
+            rowStart: 1,
+            rowEnd: 4
+        }
+    },
+
+
+    compact: {
+        hero: {
+            colStart: 1,
+            colEnd: 8,
+            rowStart: 1,
+            rowEnd: 5
+        }
+    }
+
+};
 
 function isProtectedZone(row, col) {
 
-    return(
-        col >= 5 &&
-        row >= 1 &&
-        row <= 4
-    );
+    const mode =
+        window.innerWidth <= 900
+        ? layout.compact
+        : layout.desktop;
 
+
+    const hero = mode.hero;
+
+
+    return (
+        col >= hero.colStart &&
+        col <= hero.colEnd &&
+        row >= hero.rowStart &&
+        row <= hero.rowEnd
+    );
 
 }
 
@@ -115,30 +146,51 @@ function randomTile(row, col) {
 
 
 
-for (let row = 0; row < rows; row++) {
+function generateGrid() {
 
-    for (let col = 0; col < cols; col++) {
+    grid.innerHTML = "";
 
+    for (let row = 0; row < rows; row++) {
 
-        const tileData = randomTile(row, col);
+        for (let col = 0; col < cols; col++) {
 
+            const tileData = randomTile(row, col);
 
-        const tile = document.createElement("div");
+            const tile = document.createElement("div");
 
+            tile.classList.add(
+                "tile",
+                tileData.type
+            );
 
-        tile.classList.add(
-            "tile",
-            tileData.type
-        );
+            tile.style.backgroundColor = tileData.color;
 
+            grid.appendChild(tile);
 
-        tile.style.backgroundColor = tileData.color;
-
-
-        grid.appendChild(tile);
+        }
 
     }
 
-    
-
 }
+
+// startup
+generateGrid();
+
+
+let isSmall = window.innerWidth <= 900;
+
+
+window.addEventListener("resize", () => {
+
+    const nowSmall = window.innerWidth <= 900;
+
+
+    if (nowSmall !== isSmall) {
+
+        isSmall = nowSmall;
+
+        generateGrid();
+
+    }
+
+});
