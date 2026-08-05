@@ -81,9 +81,9 @@
 
 }
 
-
-
-/* Cards */
+/* =========================
+   Interest Cards
+========================= */
 
 .interest-grid {
 
@@ -93,71 +93,251 @@
 
     gap: 2rem;
 
+    margin-top: 2rem;
+
+    align-items: start;
+
 }
+
 
 .interest-card {
 
-    position: relative;
-
-    min-height: 300px;
-
     border: 2px solid var(--asiimov-black);
 
-    padding: 2rem;
+    background: var(--asiimov-white);
 
+    padding: 0;
+
+    position: relative;
+
+    transition: background-color .2s ease;
 
 }
 
-.interest-card h3 {
+.interest-card:hover {
+
+    background-color: #e8e8e8;
+    border-color: var(--asiimov-orange);
+    cursor:pointer;
+
+}
+
+
+/* Header */
+
+.interest-header {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    background: none;
+
+    border: none;
+
+    padding: 1.5rem 1.5rem;
+
+    cursor: pointer;
+
+    text-align: left;
+
+}
+
+
+.interest-header h3 {
 
     margin: 0;
 
-    font-size: clamp(2rem, 3vw, 3rem);
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+
+    text-transform: lowercase;
 
     font-weight: 700;
 
+}
+
+
+.expand-icon {
+
+    font-size: 2rem;
+
+    color: var(--asiimov-orange);
+
+    line-height: 1;
 
 }
 
-.interest-card h3::before {
 
-    content: "";
 
-    display: inline-block;
+/* Content collapse */
 
-    width: 18px;
+.interest-body {
 
-    height: 18px;
+    max-height: 0;
 
-    background: var(--asiimov-orange);
+    overflow: hidden;
 
-    margin-right: .75rem;
+    transition:
+
+        max-height .4s ease,
+
+        padding .4s ease;
+
+    padding: 0 1.5rem;
 
 }
 
-.interest-card ul {
+
+.interest-card.open .interest-body {
+
+    max-height: 1000px;
+
+    padding-bottom: 2rem;
+
+}
+
+
+
+/* Main interest list */
+
+.interest-list {
 
     list-style: none;
 
-    margin-top: 2rem;
+    margin: 2rem 0 0 0;
 
-    padding-left: 1.5rem;
+    padding-left: .75rem;
+
+
+}
+
+.interest-list > li {
+
+    margin-bottom: 1.8rem;
+
+}
+
+.sub-interest-list li {
+
+    margin-bottom: 1.25rem;
+
+}
+
+
+/* I don't think I want this atp */
+/* .interest-card.open .interest-list {
 
     border-left: 3px solid var(--asiimov-orange);
 
-}
+} */
 
-.interest-card li {
 
-    position: relative;
 
-    margin: 1rem 0;
+/* Main bullets */
+
+.interest-title {
+
+    font-size: 1.3rem;
 
     font-weight: 700;
 
+    position: relative;
+
 }
 
-.interest-card li::before {
+
+
+/* Description text */
+
+.interest-description {
+
+    font-family: "Roboto Mono", monospace;
+
+    margin:
+
+        .3rem 0
+
+        1.2rem
+
+        .75rem;
+
+
+    font-size: .95rem;
+
+    line-height: 1.5;
+
+    color: #666;
+
+}
+
+
+
+/* Nested interests */
+
+.sub-interest-list {
+
+    list-style: none;
+
+    border-left: 3px solid var(--asiimov-orange);
+
+    margin: 1rem 0 1.5rem 1rem;
+
+    padding-left: 1rem;
+
+}
+
+
+.sub-interest-title {
+
+    font-weight: 700;
+
+    font-size: 1.05rem;
+
+    position: relative;
+
+}
+
+
+.sub-interest-description {
+
+    font-family: "Roboto Mono", monospace;
+    margin:
+
+        .25rem 0
+
+        1rem
+
+        .5rem;
+
+
+    font-size: .85rem;
+
+    line-height: 1.5;
+
+    color: #666;
+
+}
+
+@media(max-width: 1000px) {
+
+    .interest-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+
+/* Orange connector ticks */
+/* right now, not convinced I want em */
+/* 
+.sub-interest-title::before {
 
     content: "";
 
@@ -169,12 +349,11 @@
 
     width: 1rem;
 
-    height: 3px;
+    height: 2px;
 
     background: var(--asiimov-orange);
 
-}
-
+} */
 
 /* Timeline */
 
