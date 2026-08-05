@@ -77,8 +77,12 @@
 
 .content-section h2 {
 
-    font-size: clamp(2rem, 5vw, 4rem);
+    font-size: clamp(2em, 5vw, 4rem);
 
+}
+
+.passions-section{
+    margin-top: -1rem;
 }
 
 /* =========================
@@ -355,21 +359,168 @@
 
 } */
 
-/* Timeline */
+/* =========================
+   Timeline
+========================= */
 
 .timeline {
 
-    border-left: 3px solid var(--asiimov-black);
+    display: flex;
 
-    padding-left: 2rem;
+    flex-direction: column;
+
+    gap: 4rem;
+
+    margin-top: 3rem;
 
 }
 
 
-
 .timeline-item {
 
-    margin-bottom: 3rem;
+    display: grid;
+
+    grid-template-columns:
+
+        130px   /* year */
+
+        1fr     /* content */
+
+        160px;  /* optional image */
+
+    gap: 2rem;
+
+    align-items: start;
+
+}
+
+
+.timeline-year {
+
+    font-size: clamp(2.5rem, 4vw, 4rem);
+
+    font-weight: 700;
+
+    color: var(--asiimov-orange);
+
+    line-height: .9;
+
+    text-align: right;
+
+}
+
+
+.timeline-content {
+
+    position: relative;
+
+    padding-left: 2rem;
+
+    border-left: 3px solid var(--asiimov-black);
+
+}
+
+
+.timeline-content h3 {
+
+    margin: 0;
+
+    font-size: 1.6rem;
+
+    font-weight: 700;
+
+}
+
+
+.timeline-content p {
+
+    margin-top: .75rem;
+
+    margin-bottom: 0;
+
+    font-family: "Roboto Mono", monospace;
+
+    font-size: .9rem;
+
+    line-height: 1.7;
+
+    color: #666;
+
+}
+
+.timeline-media {
+
+    width: 100%;
+
+    aspect-ratio: 1;
+
+}
+
+.timeline-media img {
+
+    width: 100%;
+
+    aspect-ratio: 1;
+
+    object-fit: cover;
+
+    border: 2px solid var(--asiimov-black);
+
+    display: block;
+
+}
+
+.timeline-media:empty {
+
+    display: none;
+
+}
+
+
+/* Orange milestone square */
+
+.timeline-content::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 14px;
+
+    height: 14px;
+
+    background: var(--asiimov-orange);
+
+    left: -8px;
+
+    top: .4rem;
+
+}
+
+
+/* Responsive */
+
+@media (max-width: 800px) {
+
+    .timeline-item {
+
+        grid-template-columns: 1fr;
+
+        row-gap: .75rem;
+
+    }
+
+    .timeline-year {
+
+        text-align: left;
+
+    }
+
+    .timeline-content {
+
+        padding-left: 1.5rem;
+
+    }
 
 }
 
