@@ -521,7 +521,7 @@
     display: grid;
 
     grid-template-columns:
-        100px
+        110px
         auto
         120px;
 
