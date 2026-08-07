@@ -623,13 +623,66 @@
 
 }
 
+/* per skill */
+.skill {
 
+    display: flex;
 
-.skills span {
+    align-items: center;
+
+    gap: .75rem;
 
     border: 2px solid var(--asiimov-black);
 
-    padding: .5rem 1rem;
+    padding: .75rem 1rem;
+
+    background: var(--asiimov-white);
+
+    transition: background .2s ease;
+
+}
+
+.skill img {
+
+    width: 28px;
+
+    height: 28px;
+
+    object-fit: contain;
+
+    /* best attmpt at orange-scale? */
+    filter:
+        brightness(0)
+        saturate(100%)
+        invert(48%)
+        sepia(94%)
+        saturate(2300%)
+        hue-rotate(359deg)
+        brightness(102%)
+        contrast(105%);
+
+}
+
+/* turn off the orange-scale */
+.skill img.custom-color {
+
+    filter: none;
+
+}
+
+
+.skill span {
+
+    font-family: "Roboto Mono", monospace;
+
+    font-size: .9rem;
+
+}
+
+
+.skill:hover {
+
+    background: #e8e8e8;
 
 }
 
