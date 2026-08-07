@@ -21,6 +21,40 @@
 
 }
 
+/* divs */
+
+.section-divider {
+
+    width: 120px;
+
+    position: relative;
+
+    height: 6px;
+
+    background: var(--asiimov-orange);
+
+    margin: 5rem 0;
+
+}
+
+.section-divider::after {
+
+    content: "";
+
+    position: absolute;
+
+    right: -20px;
+
+    top: 0;
+
+    width: 12px;
+
+    height: 6px;
+
+    background: var(--asiimov-black);
+
+}
+
 
 /* Hero */
 
