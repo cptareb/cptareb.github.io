@@ -466,23 +466,30 @@
 }
 
 .timeline-media {
+    flex-shrink: 0;
 
-    width: 100px;
+    display: inline-block;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 
 
 }
 
 .timeline-media img {
 
-    width: 100px;
+    width: 100%;
 
     height: auto;
 
-    aspect-ratio: 1;
-
-    object-fit: cover;
+    object-fit: contain;
 
     border: 2px solid var(--asiimov-black);
+
+
+    /* object-fit: cover; */
 
     display: block;
 
@@ -494,6 +501,18 @@
 
 }
 
+/* size presets */
+.w-160 { width:160px; }
+.w-220 { width:220px; }
+.w-300 { width:300px; }
+.w-380 { width:380px; }
+
+
+/* shape presets */
+.square      { aspect-ratio: 1; }
+.landscape   { aspect-ratio: 16 / 9; }
+.portrait    { aspect-ratio: 4 / 5; }
+.wide         { aspect-ratio: 2 / 1; }
 
 /* Orange milestone square */
 /* removed bc ugly looking with new timeline setup */
@@ -542,6 +561,10 @@
     align-items: start;
 
     margin-bottom: 2rem;
+
+    position: relative;
+
+    padding-right: 100px;
 
 }
 
