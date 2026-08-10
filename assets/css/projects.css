@@ -223,3 +223,183 @@
         gap: 1rem;
     }
 }
+
+
+/* SQUARES copied from about pg */
+
+/* SQUARES */
+
+/* =========================
+   Perimeter Geometry
+========================= */
+
+
+.perimeter-grid {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: 0;
+
+}
+
+
+
+.geo-square {
+
+    position: absolute;
+
+}
+
+
+
+/* Orange */
+
+.geo-square.orange {
+
+    background: var(--asiimov-orange);
+    opacity: .25;
+}
+
+
+
+/* Black */
+
+.geo-square.black {
+
+    background: var(--asiimov-black);
+    opacity: .12;
+
+}
+
+
+
+/* =========================
+   Perimeter Geometry
+========================= */
+
+
+/* Left side */
+
+.square-one {
+
+    width: clamp(50px, 7vw, 120px);
+
+    aspect-ratio: 1;
+
+    top: 12%;
+
+    left: -30px;
+
+}
+
+
+.square-five {
+
+    width: clamp(30px, 5vw, 90px);
+
+    aspect-ratio: 1;
+
+    top: 70%;
+
+    left: 3%;
+
+}
+
+
+
+/* Right side */
+
+.square-two {
+
+    width: clamp(80px, 10vw, 180px);
+
+    aspect-ratio: 1;
+
+    top: 22%;
+
+    right: -50px;
+
+}
+
+
+.square-six {
+
+    width: clamp(40px, 6vw, 100px);
+
+    aspect-ratio: 1;
+
+    bottom: 18%;
+
+    right: 2%;
+
+}
+
+
+
+/* Lower left accent */
+
+.square-three {
+
+    width: clamp(25px, 4vw, 70px);
+
+    aspect-ratio: 1;
+
+    bottom: 8%;
+
+    left: -10px;
+
+}
+
+
+
+/* Upper right accent */
+
+.square-four {
+
+    width: clamp(60px, 8vw, 130px);
+
+    aspect-ratio: 1;
+
+    top: 5%;
+
+    right: 12%;
+
+}
+
+
+
+/* Bottom right */
+
+.square-seven {
+
+    width: clamp(35px, 5vw, 80px);
+
+    aspect-ratio: 1;
+
+    bottom: 5%;
+
+    right: 18%;
+
+}
+
+
+
+/* Remove this one from center */
+
+.square-eight {
+
+    width: clamp(25px, 4vw, 60px);
+
+    aspect-ratio: 1;
+
+    top: 45%;
+
+    left: auto;
+
+    right: 4%;
+
+}
