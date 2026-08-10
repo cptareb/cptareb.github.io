@@ -1,0 +1,225 @@
+/* =========================================
+   Projects Page
+   ========================================= */
+
+.projects-page {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: 6rem var(--page-padding);
+}
+
+
+/* =========================================
+   Page Header
+   ========================================= */
+
+.projects-header {
+    max-width: 700px;
+}
+
+.projects-header h1 {
+    margin: 0;
+    font-size: clamp(3rem, 8vw, 6rem);
+    line-height: 0.9;
+}
+
+.projects-header p {
+    margin-top: 1rem;
+}
+
+
+/* =========================================
+   Project List
+   ========================================= */
+
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+
+/* =========================================
+   Project Box
+   ========================================= */
+
+.project {
+    border: 2px solid var(--asiimov-black);
+    background: var(--asiimov-white);
+}
+
+
+/* =========================================
+   Project Header
+   ========================================= */
+
+.project-header {
+    display: flex;
+    align-items: stretch;
+
+    border-bottom: 2px solid var(--asiimov-black);
+
+    font-family: "Roboto Mono", monospace;
+    font-size: 0.75rem;
+}
+
+.project-number {
+    display: flex;
+    align-items: center;
+
+    padding: 0.6rem 0.9rem;
+
+    background: var(--asiimov-orange);
+    color: var(--asiimov-black);
+
+    font-weight: 500;
+}
+
+.project-category {
+    display: flex;
+    align-items: center;
+
+    padding: 0.6rem 1rem;
+}
+
+
+/* =========================================
+   Project Body
+   ========================================= */
+
+.project-body {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(220px, 0.6fr);
+
+    min-height: 230px;
+}
+
+.project-content {
+    padding: 1.75rem 2rem;
+}
+
+.project-title {
+    margin: 0;
+
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1;
+}
+
+.project-description {
+    max-width: 650px;
+    margin: 1rem 0 0;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   Project Divider
+   ========================================= */
+
+.project-divider {
+    width: 55px;
+    height: 4px;
+
+    margin: 0.9rem 0 1rem;
+
+    background: var(--asiimov-orange);
+}
+
+
+/* =========================================
+   Project Technologies
+   ========================================= */
+
+.project-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+
+    margin-top: 1.5rem;
+
+    font-family: "Roboto Mono", monospace;
+    font-size: 0.65rem;
+}
+
+.project-technologies span {
+    padding: 0.3rem 0.45rem;
+
+    border: 1px solid var(--asiimov-black);
+}
+
+
+/* =========================================
+   Project Media
+   ========================================= */
+
+.project-media {
+    min-height: 230px;
+
+    border-left: 2px solid var(--asiimov-black);
+
+    background: #e8e8e8;
+}
+
+
+/* =========================================
+   Project Footer
+   ========================================= */
+
+.project-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0.6rem 1rem;
+
+    border-top: 2px solid var(--asiimov-black);
+
+    font-family: "Roboto Mono", monospace;
+    font-size: 0.7rem;
+}
+
+.project-footer a {
+    color: var(--asiimov-black);
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+
+.project-footer a:hover {
+    color: var(--asiimov-orange);
+}
+
+
+/* =========================================
+   Responsive
+   ========================================= */
+
+@media (max-width: 700px) {
+
+    .projects-page {
+        padding-top: 4rem;
+    }
+
+    .projects-list {
+        gap: 2rem;
+    }
+
+    .project-body {
+        grid-template-columns: 1fr;
+    }
+
+    .project-content {
+        padding: 1.5rem;
+    }
+
+    .project-media {
+        min-height: 180px;
+
+        border-left: none;
+        border-top: 2px solid var(--asiimov-black);
+    }
+
+    .project-footer {
+        gap: 1rem;
+    }
+}
