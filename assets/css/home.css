@@ -218,6 +218,8 @@
 
 .social-links img {
 
+    color: #111;
+
     width: clamp(1.25rem, 2vw, 2rem);
 
     height: clamp(1.25rem, 2vw, 2rem);
@@ -227,6 +229,19 @@
     opacity: 0.7;
 
 }
+
+/* special treatment for substack since diff CDN */
+.social-links a .substack-icon {
+    width: clamp(1.25rem, 2vw, 2rem);
+    height: clamp(1.25rem, 2vw, 2rem);
+
+    display: block;
+
+    opacity: 0.9;
+    filter: grayscale(100%) brightness(1);
+}
+
+
 
 /* ------------------
    HOME LINKS
