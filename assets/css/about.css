@@ -695,7 +695,7 @@
     color: var(--asiimov-black);
     max-width: 55ch;
     font-size: 0.95rem;
-    letter-spacing: 0.02em;
+    letter-spacing: 0px;
     line-height: 1.55;
 }
 
