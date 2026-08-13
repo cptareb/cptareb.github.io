@@ -29,7 +29,6 @@
 
 .contact-intro {
     max-width: 650px;
-    margin-bottom: 3.5rem;
 }
 
 .contact-label,
@@ -39,8 +38,7 @@
     margin-bottom: 0.75rem;
 
     font-family: "Roboto Mono", monospace;
-    font-size: 0.7rem;
-    letter-spacing: 0.1em;
+    font-size: 1.4rem;
 
     color: var(--asiimov-orange);
 }
@@ -64,7 +62,7 @@
 }
 
 /* =========================
-   CONTACT DETAILS
+   CONTACT GRID
    ========================= */
 
 .contact-details {
@@ -74,7 +72,7 @@
     border-top: 1px solid var(--asiimov-black);
     border-bottom: 1px solid var(--asiimov-black);
 
-    margin-bottom: 2.5rem;
+    margin-bottom: 1rem;
 }
 
 .contact-item {
@@ -176,9 +174,7 @@
 
     display: flex;
 
-    padding-top: 0.75rem;
-
-    border-top: 2px solid #ff6a00;
+    padding-top: 0.25rem;
 
     flex-direction: row;
 
@@ -194,7 +190,7 @@
 
     filter: grayscale(100%);
 
-    font-size: clamp(1.25rem, 2vw, 2rem);
+    font-size: clamp(2rem, 2vw, 4rem);
 
     transition:
         opacity .2s ease,
@@ -227,8 +223,8 @@
 
 /* special treatment for substack since diff CDN */
 .social-links a .substack-icon {
-    width: clamp(1.25rem, 2vw, 2rem);
-    height: clamp(1.25rem, 2vw, 2rem);
+    width: clamp(2rem, 2vw, 4rem);
+    height: clamp(2rem, 2vw, 4rem);
 
     display: block;
 
