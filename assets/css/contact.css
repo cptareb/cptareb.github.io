@@ -154,36 +154,86 @@
     color: var(--asiimov-black);
 }
 
-/* =========================
+/* ------------------
    SOCIAL LINKS
-   ========================= */
+------------------- */
 
-.contact-socials {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-}
-
-.contact-socials > .contact-item-label {
-    margin: 0;
+.contact-socials { 
+    display: flex; 
+    align-items: center; 
+    gap: 2rem; 
+} 
+    
+.contact-socials > .contact-item-label { 
+    margin: 0; 
 }
 
 .social-links {
+
+    margin-top: auto;
+
+    width:90%;
+
     display: flex;
-    gap: 1.5rem;
+
+    padding-top: 0.75rem;
+
+    border-top: 2px solid #ff6a00;
+
+    flex-direction: row;
+
+    gap: clamp(.75rem, 1.5vw, 1.5rem);
+
 }
 
 .social-links a {
-    color: var(--asiimov-black);
 
-    font-family: "Roboto Mono", monospace;
-    font-size: 0.75rem;
+    color: #111;
 
-    text-decoration: none;
+    opacity: 0.7;
+
+    filter: grayscale(100%);
+
+    font-size: clamp(1.25rem, 2vw, 2rem);
+
+    transition:
+        opacity .2s ease,
+        transform .2s ease;
+
 }
 
+
 .social-links a:hover {
-    color: var(--asiimov-orange);
+
+    opacity: 1;
+
+    transform: translateY(-3px);
+
+}
+
+.social-links img {
+
+    color: #111;
+
+    width: clamp(1.25rem, 2vw, 2rem);
+
+    height: clamp(1.25rem, 2vw, 2rem);
+
+    filter: grayscale(100%);
+
+    opacity: 0.7;
+
+}
+
+/* special treatment for substack since diff CDN */
+.social-links a .substack-icon {
+    width: clamp(1.25rem, 2vw, 2rem);
+    height: clamp(1.25rem, 2vw, 2rem);
+
+    display: block;
+
+    opacity: 0.9;
+    filter: grayscale(100%) brightness(1);
 }
 
 /* =========================
