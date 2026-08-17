@@ -338,9 +338,12 @@
     .homelinks {
 
         flex-direction: column;
-
         gap: .75rem;
 
+    }
+
+    .homelinks a {
+        font-size: clamp(2.5rem, 7vw, 6rem);
     }
 
     .hero h1 {
