@@ -670,6 +670,39 @@
 
     }
 
+        .timeline-year-group {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .timeline-year {
+        text-align: left;
+    }
+
+    .timeline-event {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding-right: 0;
+    }
+
+    .timeline-event-text {
+        min-width: 0;
+    }
+
+    .timeline-media,
+    .timeline-media.w-160,
+    .timeline-media.w-220,
+    .timeline-media.w-300,
+    .timeline-media.w-380 {
+        width: 100%;
+        max-width: 380px;
+    }
+
+    .timeline-media img {
+        width: 100%;
+        height: auto;
+    }
+
     /* throwing in mo card stuff here bc lazy */
     .about-cards {
         grid-template-columns: 1fr;
@@ -936,6 +969,7 @@
 
 
 }
+
 
 /* SQUARES */
 
