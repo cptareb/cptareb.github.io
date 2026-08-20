@@ -221,6 +221,8 @@
 
     text-align: left;
 
+    color: var(--asiimov-black);
+
 }
 
 
@@ -714,6 +716,10 @@
         padding: 1.3rem 1.4rem 1.4rem;
     }
 
+    .mo-cards {
+        grid-template-columns: 1fr;
+    }
+
 }
 
 /* =========================
@@ -965,6 +971,10 @@
 
         gap: .5rem;
 
+    }
+
+    .mo-cards {
+        grid-template-columns: 1fr;
     }
 
 
