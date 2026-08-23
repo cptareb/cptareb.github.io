@@ -672,7 +672,7 @@
 
     }
 
-        .timeline-year-group {
+    .timeline-year-group {
         grid-template-columns: 1fr;
         gap: 1rem;
     }
@@ -682,6 +682,7 @@
     }
 
     .timeline-event {
+        display:grid;
         grid-template-columns: 1fr;
         gap: 1rem;
         padding-right: 0;
@@ -698,9 +699,11 @@
     .timeline-media.w-380 {
         width: 100%;
         max-width: 380px;
+        margin-top: 0.5rem;
     }
 
     .timeline-media img {
+        display:block;
         width: 100%;
         height: auto;
     }
